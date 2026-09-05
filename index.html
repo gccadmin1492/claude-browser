@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Granbury Design System</title>
+  <link rel="icon" href="design-system/brand/icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -76,17 +77,9 @@
       gap: var(--space-6);
     }
     .demo-brand { display: flex; align-items: center; gap: var(--space-2); }
-    .demo-brand__mark {
-      width: 32px; height: 32px; border-radius: var(--radius-sm);
-      background: var(--color-blue); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font: var(--text-body-medium); flex-shrink: 0;
-    }
+    .demo-brand__mark { height: 32px; width: auto; flex-shrink: 0; }
     .demo-brand span { font: var(--text-heading); font-size: 15px; }
-    .list-row__thumb--placeholder {
-      background: var(--color-surface-raised);
-      border: 1px solid var(--color-border);
-    }
+    .brand-showcase { display: flex; align-items: center; gap: var(--space-8); flex-wrap: wrap; }
     .demo-main { background: var(--color-bg); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-5); }
     .demo-topbar { display: flex; justify-content: space-between; align-items: center; }
     .demo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
@@ -99,10 +92,19 @@
       <p class="text-label">Design System</p>
       <h1 class="text-display-md">Granbury Carpet Cleaning</h1>
       <p class="text-caption" style="margin-top:8px; max-width:640px;">
-        Visual language adapted from a dark-navy dashboard reference: gradients, card radii, type scale, and spacing.
-        Drop your logo into <code>design-system/brand/</code> and reference it from the sidebar mark below.
+        Visual language adapted from a dark-navy dashboard reference (gradients, card radii, type scale, spacing),
+        applied to the real Granbury Carpet Cleaning logo.
       </p>
     </header>
+
+    <!-- Brand -->
+    <section>
+      <h2 class="text-heading section-title">Brand</h2>
+      <div class="card brand-showcase">
+        <img src="design-system/brand/logo.png" alt="Granbury Carpet Cleaning logo" style="width:360px;" />
+        <img src="design-system/brand/icon.png" alt="Granbury mascot icon" style="width:80px;" />
+      </div>
+    </section>
 
     <!-- Colors -->
     <section>
@@ -223,7 +225,7 @@
       <div class="demo-shell">
         <aside class="demo-sidebar">
           <div class="demo-brand">
-            <div class="demo-brand__mark" aria-hidden="true">G</div>
+            <img class="demo-brand__mark" src="design-system/brand/icon.png" alt="" aria-hidden="true" />
             <span>Granbury</span>
           </div>
           <nav class="nav-group">
@@ -283,7 +285,7 @@
             <div class="card">
               <div class="card__header"><h3 class="text-subheading">Today's Jobs</h3></div>
               <div class="list-row">
-                <div class="list-row__thumb list-row__thumb--placeholder" aria-hidden="true"></div>
+                <img class="list-row__thumb" src="design-system/brand/icon.png" alt="" />
                 <div>
                   <p class="list-row__title">Whole-house carpet clean</p>
                   <p class="list-row__meta">Order #227</p>
@@ -291,7 +293,7 @@
                 <span class="list-row__value">$180</span>
               </div>
               <div class="list-row">
-                <div class="list-row__thumb list-row__thumb--placeholder" aria-hidden="true"></div>
+                <img class="list-row__thumb" src="design-system/brand/icon.png" alt="" />
                 <div>
                   <p class="list-row__title">Upholstery treatment</p>
                   <p class="list-row__meta">Order #228</p>
