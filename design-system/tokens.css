@@ -1,0 +1,92 @@
+/*
+  Design tokens
+  Extracted from the "Spoon" restaurant-dashboard reference screenshots:
+  dark navy surfaces, warm orange->pink gradient accents, cool purple->blue
+  gradient accents, large card radii, and a bold geometric sans type scale.
+*/
+
+:root {
+  /* ---------- Color: surfaces ---------- */
+  --color-bg: #0c1220;              /* app background */
+  --color-surface: #141b2e;         /* card / panel background */
+  --color-surface-raised: #1a2238;  /* nested stat boxes, hovered rows */
+  --color-sidebar: #10162a;         /* sidebar background */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+
+  /* ---------- Color: text ---------- */
+  --color-text-primary: #f5f6fa;
+  --color-text-secondary: #9aa3ba;
+  --color-text-muted: #6b7488;
+  --color-text-on-accent: #ffffff;
+
+  /* ---------- Color: brand accents ---------- */
+  --color-purple: #8b5cf6;
+  --color-blue: #3b82f6;
+  --color-green: #22c55e;
+  --color-orange: #ff7a45;
+  --color-red: #ff5f6d;
+  --color-pink: #ec4899;
+  --color-teal: #2dd4bf;
+
+  /* ---------- Color: semantic ---------- */
+  --color-success: #22c55e;
+  --color-success-bg: #163625;
+  --color-danger: #ff5f6d;
+  --color-danger-bg: #3a1e26;
+  --color-info: #3b82f6;
+  --color-info-bg: #17233f;
+  --color-warning: #ff7a45;
+  --color-warning-bg: #3a2418;
+
+  /* ---------- Gradients ---------- */
+  --gradient-warm: linear-gradient(135deg, #ff9a4d 0%, #ff5f6d 55%, #ec4899 100%);
+  --gradient-cool: linear-gradient(160deg, #7c5cff 0%, #4d8dff 100%);
+  --gradient-teal: linear-gradient(160deg, #2dd4bf 0%, #4d8dff 100%);
+  --gradient-chart-bar-1: linear-gradient(180deg, #8b5cf6 0%, #4d8dff 100%);
+  --gradient-chart-bar-2: linear-gradient(180deg, #2dd4bf 0%, #22c55e 100%);
+  --gradient-chart-bar-3: linear-gradient(180deg, #ff9a4d 0%, #ff5f6d 100%);
+  --gradient-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0));
+
+  /* ---------- Typography ---------- */
+  --font-display: "Poppins", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --text-display-lg: 700 40px/1.1 var(--font-display);   /* hero stat numbers, e.g. "25" */
+  --text-display-md: 700 30px/1.15 var(--font-display);
+  --text-heading: 600 18px/1.3 var(--font-display);       /* card titles */
+  --text-subheading: 600 15px/1.4 var(--font-body);
+  --text-body: 400 14px/1.5 var(--font-body);
+  --text-body-medium: 500 14px/1.5 var(--font-body);
+  --text-caption: 400 13px/1.4 var(--font-body);
+  --text-label: 600 12px/1.2 var(--font-body);            /* uppercase eyebrow labels */
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ---------- Radius scale ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-raised: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow-warm: 0 10px 30px rgba(255, 95, 109, 0.35);
+  --shadow-glow-cool: 0 10px 30px rgba(124, 92, 255, 0.35);
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+}

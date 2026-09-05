@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" role="img" aria-label="Granbury Carpet Cleaning mascot">
+  <defs>
+    <style>
+      .skin { fill: #f0c39a; }
+      .skin-shade { fill: #dba876; }
+      .cap { fill: #2b4fc0; }
+      .cap-brim { fill: #1e3a94; }
+      .shirt { fill: #3f7cf0; }
+      .shirt-shade { fill: #2f61d0; }
+      .pants { fill: #1c2a52; }
+      .shoe { fill: #16141a; }
+      .hose { fill: none; stroke: #2b4fc0; stroke-width: 10; stroke-linecap: round; }
+      .wand { fill: #c9cdd3; }
+      .wand-tip { fill: #8b8f96; }
+      .outline { stroke: #16141a; stroke-width: 3; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- back arm + hose -->
+  <path class="hose outline" d="M62 150 C 20 170, 20 210, 55 232" />
+
+  <!-- legs -->
+  <rect class="pants outline" x="76" y="172" width="26" height="58" rx="8" />
+  <rect class="pants outline" x="112" y="172" width="26" height="58" rx="8" />
+  <rect class="shoe outline" x="70" y="222" width="34" height="16" rx="6" />
+  <rect class="shoe outline" x="108" y="222" width="34" height="16" rx="6" />
+
+  <!-- torso -->
+  <path class="shirt outline" d="M66 108 C 66 92, 82 82, 108 82 C 134 82, 150 92, 150 108 L 146 176 L 70 176 Z" />
+  <path class="shirt-shade" d="M108 82 L108 176 L146 176 L150 108 C150 92 134 82 108 82 Z" opacity="0.35" />
+
+  <!-- front arm, hand on hip -->
+  <path class="shirt outline" d="M140 108 C 158 112, 166 128, 158 144 C 154 152, 144 154, 138 148 L 132 122 Z" />
+
+  <!-- back arm holding wand -->
+  <path class="shirt outline" d="M74 110 C 58 118, 50 132, 58 146 L 74 138 Z" />
+
+  <!-- wand + nozzle -->
+  <rect class="wand outline" x="40" y="150" width="14" height="70" rx="4" transform="rotate(18 47 150)" />
+  <path class="wand-tip outline" d="M60 214 l16 10 l-6 14 l-16 -10 Z" />
+
+  <!-- neck -->
+  <rect class="skin" x="98" y="72" width="20" height="16" />
+
+  <!-- head -->
+  <circle class="skin outline" cx="108" cy="56" r="30" />
+  <path class="skin-shade" d="M108 56 m-30 0 a30 30 0 0 0 60 0 a30 22 0 0 1 -60 0" opacity="0.4" />
+
+  <!-- ear -->
+  <circle class="skin outline" cx="80" cy="58" r="5" />
+
+  <!-- smile -->
+  <path d="M96 66 Q108 76 122 65" fill="none" stroke="#8a5a3a" stroke-width="3" stroke-linecap="round" />
+  <circle cx="98" cy="52" r="3.2" fill="#16141a" />
+  <circle cx="120" cy="52" r="3.2" fill="#16141a" />
+
+  <!-- cap -->
+  <path class="cap outline" d="M76 44 C 76 22, 96 10, 110 10 C 126 10, 142 24, 142 44 Z" />
+  <ellipse class="cap-brim outline" cx="128" cy="44" rx="26" ry="8" />
+  <rect class="cap-brim" x="104" y="18" width="10" height="18" rx="3" opacity="0.6" />
+</svg>

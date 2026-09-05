@@ -1,0 +1,261 @@
+/* Component library, built on tokens.css + base.css */
+
+/* ---------- Layout shell ---------- */
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.sidebar {
+  background: var(--color-sidebar);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sidebar__brand img,
+.sidebar__brand svg {
+  height: 32px;
+  width: auto;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font: var(--text-body-medium);
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.nav-item:hover {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.nav-item[aria-current="page"] {
+  background: var(--color-blue);
+  color: var(--color-text-on-accent);
+}
+
+.nav-item__badge {
+  margin-left: auto;
+  font: var(--text-label);
+  background: var(--color-danger);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.pill--status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border-strong);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+}
+
+.card--nested {
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+/* Gradient hero stat card, e.g. "New Orders" */
+.stat-card {
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  color: var(--color-text-on-accent);
+}
+
+.stat-card--warm {
+  background: var(--gradient-warm);
+  box-shadow: var(--shadow-glow-warm);
+}
+
+.stat-card--cool {
+  background: var(--gradient-cool);
+  box-shadow: var(--shadow-glow-cool);
+}
+
+.stat-card--neutral {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.stat-card__value {
+  font: var(--text-display-lg);
+}
+
+.stat-card__value--purple { color: var(--color-purple); }
+.stat-card__value--orange { color: var(--color-orange); }
+.stat-card__value--green { color: var(--color-success); }
+.stat-card__value--blue { color: var(--color-blue); }
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font: var(--text-label);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.badge--success { background: var(--color-success-bg); color: var(--color-success); }
+.badge--danger  { background: var(--color-danger-bg); color: var(--color-danger); }
+.badge--info    { background: var(--color-info-bg); color: var(--color-info); }
+.badge--warning { background: var(--color-warning-bg); color: var(--color-warning); }
+.badge--live {
+  background: var(--color-danger);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  font: var(--text-body-medium);
+  cursor: pointer;
+  transition: filter var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+}
+
+.btn:hover { filter: brightness(1.08); }
+.btn:active { transform: translateY(1px); }
+
+.btn--primary { background: var(--color-blue); color: #fff; }
+.btn--success { background: var(--color-success); color: #fff; }
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+.btn--sm { padding: var(--space-2) var(--space-4); font: var(--text-caption); }
+.btn--full { width: 100%; }
+
+/* ---------- List rows (orders, dishes, delivery items) ---------- */
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list-row:last-child { border-bottom: none; }
+
+.list-row__thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.list-row__title { font: var(--text-body-medium); }
+.list-row__meta { font: var(--text-caption); color: var(--color-text-secondary); }
+.list-row__value { margin-left: auto; font: var(--text-body-medium); color: var(--color-purple); }
+
+/* ---------- Chart bars (Today's Order Stats style) ---------- */
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-6);
+  height: 160px;
+}
+
+.chart-bar {
+  width: 48px;
+  border-radius: var(--radius-sm);
+}
+
+.chart-bar--1 { background: var(--gradient-chart-bar-1); }
+.chart-bar--2 { background: var(--gradient-chart-bar-2); }
+.chart-bar--3 { background: var(--gradient-chart-bar-3); }
+
+/* ---------- Grid helpers ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid--cards {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
